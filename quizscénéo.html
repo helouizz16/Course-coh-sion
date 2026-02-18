@@ -180,7 +180,7 @@ img {
 
         // Envoi réponses vers Google Sheet via Web App
         function envoyerReponses(reponses){
-            fetch("https://script.google.com/macros/s/AKfycbxJ9Q8JWNVyAtoKESKnKhpLQ9-belWEraQAEuqY5UNpJ4POAZKL4jI4sgEhN-aACZy-fA/exec", {  // Remplacer par la même URL que pour Jardin public et Cathédrale
+            fetch("https://script.google.com/macros/s/AKfycbwyEins3amx_1xqbzpDH-jiaat6SMj4nXROAbwYFH1qvGjB-Qfli13Y94TqDPwBI6cCLw/exec", {  // Remplacer par la même URL que pour Jardin public et Cathédrale
                 method: "POST",
                 body: JSON.stringify({equipe: equipeCourante.nom, lieu: etapeSceneo.lieu, reponses: reponses}),
                 headers: {"Content-Type": "application/json"}
