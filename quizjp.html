@@ -176,13 +176,12 @@ img {
 html += `<div class="indice">Indice pour le QR code :</div>`;
 html += `<img src="https://www.lespapillonsdejour.fr/wp-content/uploads/2022/09/frida-kahlo.jpg">`;
             }
-
             document.getElementById("jeu").innerHTML = html;
         }
 
         // Envoi réponses vers Google Sheet via Web App
         function envoyerReponses(reponses){
-            fetch("https://script.google.com/macros/s/AKfycbxJ9Q8JWNVyAtoKESKnKhpLQ9-belWEraQAEuqY5UNpJ4POAZKL4jI4sgEhN-aACZy-fA/exec", {  // Remplacer par la même URL que pour Jardin public et Cathédrale
+            fetch("https://script.google.com/macros/s/AKfycbwyEins3amx_1xqbzpDH-jiaat6SMj4nXROAbwYFH1qvGjB-Qfli13Y94TqDPwBI6cCLw/exec", {  // Remplacer par la même URL que pour Jardin public et Cathédrale
                 method: "POST",
                 body: JSON.stringify({equipe: equipeCourante.nom, lieu: etapeJardinPublic.lieu, reponses: reponses}),
                 headers: {"Content-Type": "application/json"}
